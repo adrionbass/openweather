@@ -1,4 +1,5 @@
 import Spinner from "./Spinner";
+import '../assets/css/App.css'
 
 const Card = ({ loadingData, showData, weather, forecast }) => {
 
@@ -45,9 +46,12 @@ const Card = ({ loadingData, showData, weather, forecast }) => {
                     <div className="container">
                         <div className="card mb-3 mx-auto bg-dark text-light">
                             <div className="row g-0">
-                                <div className="col-md-4">
-                                    <h3 className="card-title">{weather.name}</h3>
-                                    <p className="card-date"> {date} </p>
+                                <div className="col-md-4 col-img-bg">
+                                    <div className="info-bg">
+                                        <h3 className="card-title">{weather.name}</h3>
+                                        <p className="card-date"> {date} </p>
+                                    </div>
+
                                     <h1 className="card-temp">
                                         {(weather.main.temp - 273.15).toFixed(1)} °C
                                     </h1>
@@ -55,7 +59,8 @@ const Card = ({ loadingData, showData, weather, forecast }) => {
                                         <img src={iconUrl} alt="icon" />
                                         {weather.weather[0].description}
                                     </p>
-                                    <img src="https://random.imagecdn.app/400/750" className="img-fluid rounded-start" alt="" />
+
+
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body text-start mt-2">
@@ -71,25 +76,25 @@ const Card = ({ loadingData, showData, weather, forecast }) => {
                                             <p>{forecastDate3}h</p>
                                             <p className="card-description">
                                                 <img src={iconUrl3} alt="icon" />
-                                                { forecast.list[1].weather[0].description }
+                                                {forecast.list[1].weather[0].description}
                                             </p>
-                                            <p className="temp">{ (forecast.list[1].main.temp -273.15).toFixed(1) } °C</p>
+                                            <p className="temp">{(forecast.list[1].main.temp - 273.15).toFixed(1)} °C</p>
                                         </div>
                                         <div className="col">
                                             <p>{forecastDate6}h</p>
                                             <p className="card-description">
                                                 <img src={iconUrl6} alt="icon" />
-                                                { forecast.list[2].weather[0].description }
+                                                {forecast.list[2].weather[0].description}
                                             </p>
-                                            <p className="temp">{ (forecast.list[2].main.temp -273.15).toFixed(1) } °C</p>
+                                            <p className="temp">{(forecast.list[2].main.temp - 273.15).toFixed(1)} °C</p>
                                         </div>
                                         <div className="col">
                                             <p>{forecastDate9}h</p>
                                             <p className="card-description">
                                                 <img src={iconUrl9} alt="icon" />
-                                                { forecast.list[3].weather[0].description }
+                                                {forecast.list[3].weather[0].description}
                                             </p>
-                                            <p className="temp">{ (forecast.list[3].main.temp -273.15).toFixed(1) } °C</p>
+                                            <p className="temp">{(forecast.list[3].main.temp - 273.15).toFixed(1)} °C</p>
                                         </div>
                                     </div>
                                 </div>

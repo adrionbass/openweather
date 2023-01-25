@@ -37,3 +37,13 @@ body {
   padding-left: 20px;
   margin-top: 300px;
 }
+
+.col-img-bg {
+  background-image: url("https://random.imagecdn.app/400/750");
+  background-size: cover;
+}
+
+.info-bg {
+  /* color: black; */
+}
+
